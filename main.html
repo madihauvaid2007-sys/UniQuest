@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>UniQuest — Discover Your College</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <div class="brand-icon">U</div>
+
+        <div class="brand-name">
+            Uni<span>Quest</span>
+        </div>
+    </div>
+
+
+    <div class="menu-heading">
+        EXPLORE
+    </div>
+
+
+    <nav class="side-menu">
+
+        <a href="#" class="menu-item active">
+            <span>⌂</span>
+            Home
+        </a>
+
+        <a href="#colleges" class="menu-item">
+            <span>⌕</span>
+            Colleges
+        </a>
+
+        <a href="#cities" class="menu-item">
+            <span>⌖</span>
+            Cities
+        </a>
+
+        <a href="#courses" class="menu-item">
+            <span>🎓</span>
+            Courses
+        </a>
+
+    </nav>
+
+
+    <div class="menu-heading">
+        MY UNIQUEST
+    </div>
+
+
+    <nav class="side-menu">
+
+        <a href="#" class="menu-item">
+            <span>♡</span>
+            Saved Colleges
+        </a>
+
+        <a href="#" class="menu-item">
+            <span>⚖</span>
+            Compare
+        </a>
+
+        <a href="#" class="menu-item">
+            <span>✦</span>
+            My Matches
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="quiz-card">
+
+            <div class="quiz-icon">
+                ✦
+            </div>
+
+            <h4>
+                Find your perfect match
+            </h4>
+
+            <p>
+                Tell us what you want in a college
+                and discover your best matches.
+            </p>
+
+            <button onclick="goToQuiz()">
+                Take the Quiz →
+            </button>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN AREA
+========================================= -->
+
+<main class="main-content">
+
+
+    <!-- TOP NAVBAR -->
+
+    <header class="topbar">
+
+        <div class="mobile-logo">
+            Uni<span>Quest</span>
+        </div>
+
+        <div class="top-links">
+
+            <a href="#colleges">
+                Explore
+            </a>
+
+            <a href="#cities">
+                Cities
+            </a>
+
+            <a href="#courses">
+                Courses
+            </a>
+
+            <a href="#">
+                About
+            </a>
+
+        </div>
+
+
+        <div class="profile-area">
+
+            <button class="notification">
+                ♡
+            </button>
+
+            <div class="avatar">
+                U
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="main-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                ✦ INDIA'S COLLEGE DISCOVERY PLATFORM
+            </div>
+
+            <h1>
+                Find the college
+                <br>
+                <em>that feels right.</em>
+            </h1>
+
+            <p>
+                Explore India's top colleges, discover campus life,
+                compare your options and find the place where
+                your next chapter begins.
+            </p>
+
+
+            <div class="search-container">
+
+                <span class="search-icon">
+                    ⌕
+                </span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search colleges, cities or courses..."
+                >
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CATEGORY PILLS
+    ========================================= -->
+
+    <section class="content-section">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="small-heading">
+                    START EXPLORING
+                </p>
+
+                <h2>
+                    Explore by category
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="category-row">
+
+            <button class="category active"
+                    data-category="all">
+                All Colleges
+            </button>
+
+            <button class="category"
+                    data-category="engineering">
+                💻 Engineering
+            </button>
+
+            <button class="category"
+                    data-category="iit">
+                🏛 IITs
+            </button>
+
+            <button class="category"
+                    data-category="nit">
+                🎓 NITs
+            </button>
+
+            <button class="category"
+                    data-category="private">
+                ✦ Private Colleges
+            </button>
+
+            <button class="category"
+                    data-category="government">
+                🏫 Government
+            </button>
+
+            <button class="category"
+                    data-category="campus">
+                🌿 Great Campus Life
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FEATURED COLLEGES
+    ========================================= -->
+
+    <section class="content-section"
+             id="colleges">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="small-heading">
+                    TOP PICKS
+                </p>
+
+                <h2>
+                    Best Engineering Colleges in India
+                </h2>
+
+                <p class="section-description">
+                    Explore some of India's most sought-after
+                    institutions.
+                </p>
+
+            </div>
+
+
+            <button class="view-all"
+                    onclick="showAllColleges()">
+
+                View all →
+                
+            </button>
+
+        </div>
+
+
+        <div class="college-grid"
+             id="featuredGrid">
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DISCOVER BANNER
+    ========================================= -->
+
+    <section class="discover-banner">
+
+        <div class="discover-content">
+
+            <div class="discover-label">
+                NOT SURE WHERE TO START?
+            </div>
+
+            <h2>
+                Your dream college
+                might be closer than you think.
+            </h2>
+
+            <p>
+                Answer a few simple questions about your
+                goals, budget and preferences. UniQuest will
+                help you discover colleges that fit your journey.
+            </p>
+
+            <button onclick="goToQuiz()">
+                Find My College →
+            </button>
+
+        </div>
+
+
+        <div class="discover-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1564981797816-6d2451b23c66?auto=format&fit=crop&w=1000&q=85"
+                alt="University campus"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         EXPLORE ALL COLLEGES
+    ========================================= -->
+
+    <section class="content-section explore-section"
+             id="explore">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="small-heading">
+                    DISCOVER
+                </p>
+
+                <h2>
+                    Explore Colleges
+                </h2>
+
+                <p class="section-description">
+                    Find your perfect match across India.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="explore-layout">
+
+
+            <!-- FILTER SIDEBAR -->
+
+            <aside class="filters">
+
+                <div class="filter-header">
+
+                    <h3>
+                        Filters
+                    </h3>
+
+                    <button id="clearFilters">
+                        Clear all
+                    </button>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Location
+                    </h4>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="location-filter"
+                               value="Delhi">
+
+                        Delhi
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="location-filter"
+                               value="Mumbai">
+
+                        Mumbai
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="location-filter"
+                               value="Bangalore">
+
+                        Bangalore
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="location-filter"
+                               value="Chennai">
+
+                        Chennai
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="location-filter"
+                               value="Pune">
+
+                        Pune
+                    </label>
+
+                </div>
+
+
+
+                <!-- COURSE -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Course
+                    </h4>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="course-filter"
+                               value="Engineering">
+
+                        Engineering
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="course-filter"
+                               value="Computer Science">
+
+                        Computer Science
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="course-filter"
+                               value="Management">
+
+                        Management
+                    </label>
+
+                </div>
+
+
+
+                <!-- TYPE -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        College Type
+                    </h4>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="type-filter"
+                               value="Government">
+
+                        Government
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox"
+                               class="type-filter"
+                               value="Private">
+
+                        Private
+                    </label>
+
+                </div>
+
+
+
+                <!-- BUDGET -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Maximum Annual Fee
+                    </h4>
+
+                    <input
+                        type="range"
+                        id="budgetFilter"
+                        min="1"
+                        max="6"
+                        value="6"
+                    >
+
+                    <div class="budget-display">
+                        Up to ₹6 Lakh
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+
+            <!-- COLLEGE RESULTS -->
+
+            <div class="results-area">
+
+                <div class="results-top">
+
+                    <span id="resultCount">
+                        Colleges
+                    </span>
+
+
+                    <select id="sortSelect">
+
+                        <option value="recommended">
+                            Recommended
+                        </option>
+
+                        <option value="rating">
+                            Highest Rated
+                        </option>
+
+                        <option value="fees">
+                            Lowest Fees
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="college-grid"
+                     id="allCollegeGrid">
+                </div>
+
+
+                <div class="no-results"
+                     id="noResults">
+
+                    <div>
+                        🔍
+                    </div>
+
+                    <h3>
+                        No colleges found
+                    </h3>
+
+                    <p>
+                        Try changing your filters or search.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CITIES
+    ========================================= -->
+
+    <section class="content-section"
+             id="cities">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="small-heading">
+                    EXPLORE INDIA
+                </p>
+
+                <h2>
+                    Discover colleges by city
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="city-grid">
+
+            <div class="city-card">
+                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=700&q=80">
+                <div>
+                    <h3>Delhi</h3>
+                    <p>Top universities & institutions</p>
+                </div>
+            </div>
+
+
+            <div class="city-card">
+                <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=700&q=80">
+                <div>
+                    <h3>Mumbai</h3>
+                    <p>Education meets opportunity</p>
+                </div>
+            </div>
+
+
+            <div class="city-card">
+                <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=700&q=80">
+                <div>
+                    <h3>Bangalore</h3>
+                    <p>India's technology hub</p>
+                </div>
+            </div>
+
+
+            <div class="city-card">
+                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=80">
+                <div>
+                    <h3>Chennai</h3>
+                    <p>Leading institutions & culture</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Uni<span>Quest</span>
+        </div>
+
+        <p>
+            Explore. Discover. Belong.
+        </p>
+
+        <p class="copyright">
+            © 2026 UniQuest
+        </p>
+
+    </footer>
+
+
+</main>
+
+
+<!-- JavaScript -->
+<script src="main.js"></script>
+
+</body>
+</html>

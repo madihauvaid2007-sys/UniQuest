@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>UniQuest — Find Your College</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="form.css">
+
+</head>
+
+
+<body>
+
+
+  <!-- ==========================================
+       HEADER
+       ========================================== -->
+
+  <header class="form-header">
+
+    <a href="index.html" class="form-logo">
+
+      <span class="form-logo-icon">
+        🎓
+      </span>
+
+      <span>
+        UniQuest
+      </span>
+
+    </a>
+
+
+    <div class="header-right">
+
+      <!-- SKIP FORM -->
+
+      <button
+        type="button"
+        class="skip-button"
+        onclick="skipForm()"
+      >
+        Skip
+      </button>
+
+
+      <a
+        href="index.html"
+        class="menu-button"
+      >
+        ☰
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- ==========================================
+       MAIN FORM
+       ========================================== -->
+
+  <main class="form-page">
+
+
+    <!-- Background overlay -->
+
+    <div class="background-overlay"></div>
+
+
+    <!-- FORM CARD -->
+
+    <div class="form-container">
+
+
+      <!-- ======================================
+           PROGRESS
+           ====================================== -->
+
+      <div class="progress-area">
+
+        <div class="progress-text">
+
+          <span id="stepText">
+            Step 1 of 4
+          </span>
+
+        </div>
+
+        <div class="progress-bar">
+
+          <div
+            class="progress-fill"
+            id="progressFill"
+          ></div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ======================================
+           STEP 1
+           ====================================== -->
+
+      <section
+        class="form-step active"
+        id="step1"
+      >
+
+        <div class="step-heading">
+
+          <p class="small-label">
+            STEP 01
+          </p>
+
+          <h1>
+            Tell us about you.
+          </h1>
+
+          <p>
+            Let's start with a few basics.
+          </p>
+
+        </div>
+
+
+        <div class="form-two-column">
+
+
+          <!-- NAME -->
+
+          <div class="form-group">
+
+            <label for="name">
+              What's your name?
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- CITY -->
+
+          <div class="form-group">
+
+            <label for="city">
+              Where are you from?
+            </label>
+
+            <input
+              type="text"
+              id="city"
+              placeholder="Enter your city"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- AGE -->
+
+          <div class="form-group">
+
+            <label for="age">
+              How old are you?
+            </label>
+
+            <input
+              type="number"
+              id="age"
+              placeholder="Enter your age"
+              min="10"
+              max="100"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- EDUCATION -->
+
+          <div class="form-group">
+
+            <label for="education">
+              Current education
+            </label>
+
+            <div class="select-wrapper">
+
+              <select
+                id="education"
+                required
+              >
+
+                <option value="">
+                  Select education
+                </option>
+
+                <option value="class10">
+                  Class 10
+                </option>
+
+                <option value="class11">
+                  Class 11
+                </option>
+
+                <option value="class12">
+                  Class 12
+                </option>
+
+                <option value="diploma">
+                  Diploma
+                </option>
+
+                <option value="undergraduate">
+                  Undergraduate
+                </option>
+
+                <option value="other">
+                  Other
+                </option>
+
+              </select>
+
+              <span class="select-arrow">
+                ▼
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="button-row">
+
+          <button
+            type="button"
+            class="skip-card-button"
+            onclick="skipForm()"
+          >
+            Skip for now
+          </button>
+
+
+          <button
+            type="button"
+            class="next-button"
+            onclick="nextStep()"
+          >
+            Continue
+            <span>→</span>
+          </button>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ======================================
+           STEP 2
+           ====================================== -->
+
+      <section
+        class="form-step"
+        id="step2"
+      >
+
+        <div class="step-heading">
+
+          <p class="small-label">
+            STEP 02
+          </p>
+
+          <h1>
+            Your interests.
+          </h1>
+
+          <p>
+            What kind of course are you interested in?
+          </p>
+
+        </div>
+
+
+        <div class="interest-group">
+
+
+          <!-- ENGINEERING -->
+
+          <label class="interest-card">
+
+            <input
+              type="checkbox"
+              name="interest"
+              value="engineering"
+            >
+
+            <div class="interest-content">
+
+              <span class="interest-icon">
+                ⚙️
+              </span>
+
+              <div>
+
+                <h3>
+                  Engineering
+                </h3>
+
+                <p>
+                  Technology, computers, machines & engineering
+                </p>
+
+              </div>
+
+            </div>
+
+          </label>
+
+
+          <div
+            class="sub-options"
+            id="engineeringOptions"
+          >
+
+            <p class="sub-title">
+              Choose your engineering interest
+            </p>
+
+            <label>
+              <input type="checkbox" name="course" value="computer-science">
+              Computer Science / IT
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="ai-data-science">
+              AI & Data Science
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="electronics">
+              Electronics & Communication
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="mechanical">
+              Mechanical Engineering
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="civil">
+              Civil Engineering
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="electrical">
+              Electrical Engineering
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="chemical">
+              Chemical Engineering
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="other-engineering">
+              Other Engineering
+            </label>
+
+          </div>
+
+
+
+          <!-- MANAGEMENT -->
+
+          <label class="interest-card">
+
+            <input
+              type="checkbox"
+              name="interest"
+              value="management"
+            >
+
+            <div class="interest-content">
+
+              <span class="interest-icon">
+                📊
+              </span>
+
+              <div>
+
+                <h3>
+                  MBA / Management
+                </h3>
+
+                <p>
+                  Business, management & entrepreneurship
+                </p>
+
+              </div>
+
+            </div>
+
+          </label>
+
+
+          <div
+            class="sub-options"
+            id="managementOptions"
+          >
+
+            <p class="sub-title">
+              Choose your management interest
+            </p>
+
+            <label>
+              <input type="checkbox" name="course" value="bba">
+              BBA / Business Administration
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="finance">
+              Finance
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="marketing">
+              Marketing
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="hr">
+              Human Resources
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="business-analytics">
+              Business Analytics
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="operations">
+              Operations Management
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="entrepreneurship">
+              Entrepreneurship
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="general-mba">
+              General MBA
+            </label>
+
+          </div>
+
+
+
+          <!-- MEDICINE -->
+
+          <label class="interest-card">
+
+            <input
+              type="checkbox"
+              name="interest"
+              value="medicine"
+            >
+
+            <div class="interest-content">
+
+              <span class="interest-icon">
+                🩺
+              </span>
+
+              <div>
+
+                <h3>
+                  MBBS / Medicine
+                </h3>
+
+                <p>
+                  Medical, healthcare & allied health courses
+                </p>
+
+              </div>
+
+            </div>
+
+          </label>
+
+
+          <div
+            class="sub-options"
+            id="medicineOptions"
+          >
+
+            <p class="sub-title">
+              Choose your medical interest
+            </p>
+
+            <label>
+              <input type="checkbox" name="course" value="mbbs">
+              MBBS
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="bds">
+              BDS / Dentistry
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="bams">
+              BAMS
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="bhms">
+              BHMS
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="pharmacy">
+              Pharmacy
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="nursing">
+              Nursing
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="physiotherapy">
+              Physiotherapy
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="allied-health">
+              Allied Health Sciences
+            </label>
+
+          </div>
+
+
+
+          <!-- OTHER -->
+
+          <label class="interest-card">
+
+            <input
+              type="checkbox"
+              name="interest"
+              value="other"
+            >
+
+            <div class="interest-content">
+
+              <span class="interest-icon">
+                🎓
+              </span>
+
+              <div>
+
+                <h3>
+                  Other Courses
+                </h3>
+
+                <p>
+                  Explore other fields and career paths
+                </p>
+
+              </div>
+
+            </div>
+
+          </label>
+
+
+          <div
+            class="sub-options"
+            id="otherOptions"
+          >
+
+            <p class="sub-title">
+              Choose your course interest
+            </p>
+
+            <label>
+              <input type="checkbox" name="course" value="law">
+              Law
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="design">
+              Design
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="architecture">
+              Architecture
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="commerce">
+              Commerce
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="economics">
+              Economics
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="arts">
+              Arts & Humanities
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="science">
+              Science
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="psychology">
+              Psychology
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="hotel-management">
+              Hotel Management
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="media">
+              Media & Journalism
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="agriculture">
+              Agriculture
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="education">
+              Education
+            </label>
+
+            <label>
+              <input type="checkbox" name="course" value="other-course">
+              Other
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <div class="button-row">
+
+          <button
+            type="button"
+            class="back-button"
+            onclick="previousStep()"
+          >
+            ← Back
+          </button>
+
+          <button
+            type="button"
+            class="next-button"
+            onclick="nextStep()"
+          >
+            Continue
+            <span>→</span>
+          </button>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ======================================
+           STEP 3
+           ====================================== -->
+
+      <section
+        class="form-step"
+        id="step3"
+      >
+
+        <div class="step-heading">
+
+          <p class="small-label">
+            STEP 03
+          </p>
+
+          <h1>
+            Your preferences.
+          </h1>
+
+          <p>
+            Tell us what you're looking for.
+          </p>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="location">
+            Where would you like to study?
+          </label>
+
+          <div class="select-wrapper">
+
+            <select id="location">
+
+              <option value="">
+                Select your preference
+              </option>
+
+              <option value="my-city">
+                My city
+              </option>
+
+              <option value="my-state">
+                My state
+              </option>
+
+              <option value="anywhere-india">
+                Anywhere in India
+              </option>
+
+              <option value="specific">
+                A specific location
+              </option>
+
+            </select>
+
+            <span class="select-arrow">
+              ▼
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label>
+            What's your yearly budget?
+          </label>
+
+          <div class="option-list">
+
+            <label class="radio-card">
+              <input type="radio" name="budget" value="under-2">
+              <span>Under ₹2 lakh</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="budget" value="2-5">
+              <span>₹2–5 lakh</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="budget" value="5-10">
+              <span>₹5–10 lakh</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="budget" value="10-plus">
+              <span>₹10 lakh+</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="budget" value="not-sure">
+              <span>I'm not sure</span>
+            </label>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label>
+            What type of college do you prefer?
+          </label>
+
+          <div class="option-list">
+
+            <label class="radio-card">
+
+              <input
+                type="radio"
+                name="collegeType"
+                value="government"
+              >
+
+              <span>
+                Government
+              </span>
+
+            </label>
+
+            <label class="radio-card">
+
+              <input
+                type="radio"
+                name="collegeType"
+                value="private"
+              >
+
+              <span>
+                Private
+              </span>
+
+            </label>
+
+            <label class="radio-card">
+
+              <input
+                type="radio"
+                name="collegeType"
+                value="either"
+              >
+
+              <span>
+                Either
+              </span>
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <div class="button-row">
+
+          <button
+            type="button"
+            class="back-button"
+            onclick="previousStep()"
+          >
+            ← Back
+          </button>
+
+          <button
+            type="button"
+            class="next-button"
+            onclick="nextStep()"
+          >
+            Continue
+            <span>→</span>
+          </button>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ======================================
+           STEP 4
+           ====================================== -->
+
+      <section
+        class="form-step"
+        id="step4"
+      >
+
+        <div class="step-heading">
+
+          <p class="small-label">
+            STEP 04
+          </p>
+
+          <h1>
+            Your goals.
+          </h1>
+
+          <p>
+            What do you want from your college experience?
+          </p>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="career">
+            What career interests you?
+          </label>
+
+          <input
+            type="text"
+            id="career"
+            placeholder="e.g. Doctor, Engineer, Designer"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            What matters most to you?
+          </label>
+
+          <div class="interest-grid">
+
+
+            <label class="choice-card">
+
+              <input
+                type="checkbox"
+                name="priority"
+                value="placements"
+              >
+
+              <span class="choice-content">
+
+                <span class="choice-title">
+                  Placements
+                </span>
+
+                <span class="choice-check">
+                  ✓
+                </span>
+
+              </span>
+
+            </label>
+
+
+            <label class="choice-card">
+
+              <input
+                type="checkbox"
+                name="priority"
+                value="academics"
+              >
+
+              <span class="choice-content">
+
+                <span class="choice-title">
+                  Academics
+                </span>
+
+                <span class="choice-check">
+                  ✓
+                </span>
+
+              </span>
+
+            </label>
+
+
+            <label class="choice-card">
+
+              <input
+                type="checkbox"
+                name="priority"
+                value="campus-life"
+              >
+
+              <span class="choice-content">
+
+                <span class="choice-title">
+                  Campus Life
+                </span>
+
+                <span class="choice-check">
+                  ✓
+                </span>
+
+              </span>
+
+            </label>
+
+
+            <label class="choice-card">
+
+              <input
+                type="checkbox"
+                name="priority"
+                value="fees"
+              >
+
+              <span class="choice-content">
+
+                <span class="choice-title">
+                  Affordable Fees
+                </span>
+
+                <span class="choice-check">
+                  ✓
+                </span>
+
+              </span>
+
+            </label>
+
+
+            <label class="choice-card">
+
+              <input
+                type="checkbox"
+                name="priority"
+                value="scholarships"
+              >
+
+              <span class="choice-content">
+
+                <span class="choice-title">
+                  Scholarships
+                </span>
+
+                <span class="choice-check">
+                  ✓
+                </span>
+
+              </span>
+
+            </label>
+
+
+            <label class="choice-card">
+
+              <input
+                type="checkbox"
+                name="priority"
+                value="sports"
+              >
+
+              <span class="choice-content">
+
+                <span class="choice-title">
+                  Sports & Activities
+                </span>
+
+                <span class="choice-check">
+                  ✓
+                </span>
+
+              </span>
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <div class="button-row">
+
+          <button
+            type="button"
+            class="back-button"
+            onclick="previousStep()"
+          >
+            ← Back
+          </button>
+
+          <button
+            type="button"
+            class="finish-button"
+            onclick="finishForm()"
+          >
+
+            Find My Colleges
+
+            <span>→</span>
+
+          </button>
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+  <script src="form.js"></script>
+
+</body>
+
+</html>
